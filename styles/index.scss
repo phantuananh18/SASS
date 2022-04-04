@@ -1,0 +1,24 @@
+@import 'variable';
+@import 'header';
+@import 'footer';
+
+@mixin buttonStyle($color,$textSize) {
+    background-color: aqua;
+    color:$color;
+    font-size: $textSize;
+
+}
+.txt{
+    font-size: 50px;
+    font-weight: bold;
+}
+section{
+    p{
+        @extend .txt;
+    }
+    .btn{
+        @include buttonStyle($main-color,100px);
+    }
+    
+}
+
